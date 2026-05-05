@@ -117,6 +117,20 @@ http://localhost:8888
 
 ---
 
+🎨 Customize UI Theme (Color Change)
+
+If you want to change the UI theme (for example, font color or overall theme styling), you can modify the UI service environment variable in the docker-compose.yaml file.
+
+Update this line under the UI service:
+
+RETAIL_UI_THEME=orange
+
+You can experiment with different values depending on supported themes, but orange works by default in this setup.
+
+After making changes, restart the UI service:
+
+sudo -E docker compose up -d --force-recreate ui
+
 ## 🐞 Issues I Faced & Fixes
 
 ### 1. DB_PASSWORD not detected
