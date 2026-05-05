@@ -4,7 +4,7 @@ This project is a microservices-based retail application that I ran using Docker
 
 ---
 
-## 🧱 Architecture Overview
+## Architecture Overview
 
 The application consists of:
 
@@ -26,7 +26,7 @@ The application consists of:
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 Make sure the following are installed:
 
@@ -36,7 +36,7 @@ Make sure the following are installed:
 
 ---
 
-## 🔑 Environment Variable Setup
+##  Environment Variable Setup
 
 This project requires a database password.
 
@@ -46,7 +46,7 @@ Before running the containers, export the variable:
 export DB_PASSWORD='mydbkalyan101'
 ```
 
-⚠️ Important:
+Important:
 If using `sudo`, you must preserve the environment:
 
 ```bash
@@ -57,7 +57,7 @@ Otherwise, Docker Compose will not pick up `DB_PASSWORD`.
 
 ---
 
-## 🚀 Steps I Followed
+##  Steps I Followed
 
 ### 1. Stop existing containers (if any)
 
@@ -79,7 +79,7 @@ sudo -E docker compose up -d
 
 ---
 
-## 🔍 Useful Commands I Used
+## Useful Commands I Used
 
 ### Check running containers
 
@@ -107,7 +107,7 @@ sudo -E docker compose up -d --force-recreate ui
 
 ---
 
-## 🌐 Access Application
+##  Access Application
 
 Once everything is up, access UI at:
 
@@ -117,7 +117,7 @@ http://localhost:8888
 
 ---
 
-🎨 Customize UI Theme (Color Change)
+ Customize UI Theme (Color Change)
 
 If you want to change the UI theme (for example, font color or overall theme styling), you can modify the UI service environment variable in the docker-compose.yaml file.
 
@@ -140,7 +140,7 @@ After Updating to Orange Color as mentioned it will look like this.
 <img width="834" height="291" alt="Screenshot from 2026-05-05 16-42-29" src="https://github.com/user-attachments/assets/d8c0a6bf-3cfc-462a-b61b-63baf7d9efdd" />
 
 
-## 🐞 Issues I Faced & Fixes
+##  Issues I Faced & Fixes
 
 ### 1. DB_PASSWORD not detected
 
@@ -193,7 +193,7 @@ tmpfs:
 
 ---
 
-## 🔐 Security Notes
+## Security Notes
 
 * Containers use `read_only: true`
 * Minimal Linux capabilities (`cap_drop: all`)
@@ -202,15 +202,15 @@ tmpfs:
 
 ---
 
-## ✅ Final Status
+## FINAL STATUS
 
 After fixing environment variable issues and restarting services:
 
-* All containers are running ✅
+* All containers are running fine as you can see in below screenshot
   <img width="1915" height="577" alt="Screenshot from 2026-05-05 16-47-59" src="https://github.com/user-attachments/assets/5f7283d6-8529-4f9f-9c0b-ba31ee82c038" />
 
-* Database connections working ✅
-* UI accessible on port 8888 with localhost✅
+* Database connections working that's why UI is loading.
+* UI accessible on port 8888 with localhost as you can see below
   <img width="1899" height="1103" alt="Screenshot from 2026-05-05 16-49-20" src="https://github.com/user-attachments/assets/8cf1e0b6-b8a2-4c4c-9b2c-b169bbe6ef86" />
 
 
