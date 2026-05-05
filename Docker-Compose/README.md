@@ -140,6 +140,9 @@ sudo -E docker compose up -d --force-recreate ui
 ```
 The "DB_PASSWORD" variable is not set
 ```
+**Error Screenshot **
+<img width="949" height="243" alt="Screenshot from 2026-05-05 16-36-34" src="https://github.com/user-attachments/assets/194bcd4f-2dbb-4c8b-9726-9a8050954074" />
+
 
 **Fix:**
 Use:
