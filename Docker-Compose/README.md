@@ -121,6 +121,10 @@ http://localhost:8888
 
 If you want to change the UI theme (for example, font color or overall theme styling), you can modify the UI service environment variable in the docker-compose.yaml file.
 
+Default UI will look like this.
+<img width="1181" height="325" alt="Screenshot from 2026-05-05 16-43-57" src="https://github.com/user-attachments/assets/b088f958-d060-4f85-be1e-a8c654c31a1c" />
+
+
 Update this line under the UI service:
 
 RETAIL_UI_THEME=orange
@@ -130,6 +134,11 @@ You can experiment with different values depending on supported themes, but oran
 After making changes, restart the UI service:
 
 sudo -E docker compose up -d --force-recreate ui
+
+After Updating to Orange Color as mentioned it will look like this.
+
+<img width="834" height="291" alt="Screenshot from 2026-05-05 16-42-29" src="https://github.com/user-attachments/assets/d8c0a6bf-3cfc-462a-b61b-63baf7d9efdd" />
+
 
 ## 🐞 Issues I Faced & Fixes
 
@@ -193,30 +202,17 @@ tmpfs:
 
 ---
 
-## 📁 Project Files
-
-```
-docker-compose.yaml
-README.md
-```
-
----
-
-## 📌 Notes
-
-* This setup is mainly for learning / practice
-* Not production-ready
-* Uses local versions of cloud services (like DynamoDB)
-
----
-
 ## ✅ Final Status
 
 After fixing environment variable issues and restarting services:
 
 * All containers are running ✅
+  <img width="1915" height="577" alt="Screenshot from 2026-05-05 16-47-59" src="https://github.com/user-attachments/assets/5f7283d6-8529-4f9f-9c0b-ba31ee82c038" />
+
 * Database connections working ✅
-* UI accessible ✅
+* UI accessible on port 8888 with localhost✅
+  <img width="1899" height="1103" alt="Screenshot from 2026-05-05 16-49-20" src="https://github.com/user-attachments/assets/8cf1e0b6-b8a2-4c4c-9b2c-b169bbe6ef86" />
+
 
 ---
 
