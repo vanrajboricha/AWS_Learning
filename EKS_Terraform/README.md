@@ -1,0 +1,49 @@
+##OUTPUT of Cluster Infomation
+
+einfochips@91P2S24:~/AWS_Learning$ aws eks --region ap-south-1 update-kubeconfig --name PES-IA-dev-eks-vanbor
+Added new context arn:aws:eks:ap-south-1:454143665149:cluster/PES-IA-dev-eks-vanbor to /home/einfochips/.kube/config
+einfochips@91P2S24:~/AWS_Learning$ kubectl get nodes
+NAME                                          STATUS   ROLES    AGE   VERSION
+ip-10-0-124-219.ap-south-1.compute.internal   Ready    <none>   89s   v1.34.7-eks-4136f65
+ip-10-0-124-42.ap-south-1.compute.internal    Ready    <none>   87s   v1.34.7-eks-4136f65
+ip-10-0-224-124.ap-south-1.compute.internal   Ready    <none>   88s   v1.34.7-eks-4136f65
+einfochips@91P2S24:~/AWS_Learning$ kubectl version
+Client Version: v1.36.0
+Kustomize Version: v5.8.1
+Server Version: v1.34.7-eks-40737a8
+Warning: version difference between client (1.36) and server (1.34) exceeds the supported minor version skew of +/-1
+einfochips@91P2S24:~/AWS_Learning$ kubectl get clusterinfo
+error: the server doesn't have a resource type "clusterinfo"
+einfochips@91P2S24:~/AWS_Learning$ kubectl get --all 
+error: unknown flag: --all
+See 'kubectl get --help' for usage.
+einfochips@91P2S24:~/AWS_Learning$ kubectl get all --all-namespaces
+NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE
+kube-system   pod/aws-node-7b5f8             2/2     Running   0          2m23s
+kube-system   pod/aws-node-ckv6t             2/2     Running   0          2m23s
+kube-system   pod/aws-node-rqttj             2/2     Running   0          2m24s
+kube-system   pod/coredns-66cff8d9f9-c99k8   1/1     Running   0          7m58s
+kube-system   pod/coredns-66cff8d9f9-sxr9t   1/1     Running   0          7m58s
+kube-system   pod/kube-proxy-9llps           1/1     Running   0          2m24s
+kube-system   pod/kube-proxy-bfz2c           1/1     Running   0          2m23s
+kube-system   pod/kube-proxy-kj4st           1/1     Running   0          2m23s
+
+NAMESPACE     NAME                                TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                  AGE
+default       service/kubernetes                  ClusterIP   172.20.0.1       <none>        443/TCP                  9m1s
+kube-system   service/eks-extension-metrics-api   ClusterIP   172.20.209.132   <none>        443/TCP                  8m59s
+kube-system   service/kube-dns                    ClusterIP   172.20.0.10      <none>        53/UDP,53/TCP,9153/TCP   7m59s
+
+NAMESPACE     NAME                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+kube-system   daemonset.apps/aws-node     3         3         3       3            3           <none>          7m58s
+kube-system   daemonset.apps/kube-proxy   3         3         3       3            3           <none>          7m59s
+
+NAMESPACE     NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+kube-system   deployment.apps/coredns   2/2     2            2           7m59s
+
+NAMESPACE     NAME                                 DESIRED   CURRENT   READY   AGE
+kube-system   replicaset.apps/coredns-66cff8d9f9   2         2         2       7m58s
+einfochips@91P2S24:~/AWS_Learning$ 
+##
+Relevant Images
+
+
