@@ -1,5 +1,14 @@
-##OUTPUT of Cluster Infomation
+AWS COnsole Cluster Details.
 
+<img width="1920" height="1200" alt="Screenshot from 2026-05-10 14-32-06" src="https://github.com/user-attachments/assets/c7dbde9b-9c87-4269-b5e1-bc75d6b7678e" />
+
+AWS Cluster Details from Terminal.
+
+<img width="1233" height="958" alt="Screenshot from 2026-05-10 14-30-58" src="https://github.com/user-attachments/assets/f1cbd18d-028a-4128-a1eb-218fc41f3624" />
+
+-------------------------------
+##OUTPUT of Cluster Infomation
+--------------------------------
 einfochips@91P2S24:~/AWS_Learning$ aws eks --region ap-south-1 update-kubeconfig --name PES-IA-dev-eks-vanbor
 Added new context arn:aws:eks:ap-south-1:454143665149:cluster/PES-IA-dev-eks-vanbor to /home/einfochips/.kube/config
 einfochips@91P2S24:~/AWS_Learning$ kubectl get nodes
