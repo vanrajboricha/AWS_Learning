@@ -9,8 +9,11 @@ AWS Cluster Details from Terminal.
 -------------------------------
 ##OUTPUT of Cluster Infomation
 --------------------------------
+
+
 einfochips@91P2S24:~/AWS_Learning$ aws eks --region ap-south-1 update-kubeconfig --name PES-IA-dev-eks-vanbor
-Added new context arn:aws:eks:ap-south-1:454143665149:cluster/PES-IA-dev-eks-vanbor to /home/einfochips/.kube/config
+
+-------------------------------------------------------
 einfochips@91P2S24:~/AWS_Learning$ kubectl get nodes
 NAME                                          STATUS   ROLES    AGE   VERSION
 ip-10-0-124-219.ap-south-1.compute.internal   Ready    <none>   89s   v1.34.7-eks-4136f65
@@ -26,6 +29,8 @@ error: the server doesn't have a resource type "clusterinfo"
 einfochips@91P2S24:~/AWS_Learning$ kubectl get --all 
 error: unknown flag: --all
 See 'kubectl get --help' for usage.
+==================================================
+
 einfochips@91P2S24:~/AWS_Learning$ kubectl get all --all-namespaces
 NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE
 kube-system   pod/aws-node-7b5f8             2/2     Running   0          2m23s
@@ -52,7 +57,6 @@ kube-system   deployment.apps/coredns   2/2     2            2           7m59s
 NAMESPACE     NAME                                 DESIRED   CURRENT   READY   AGE
 kube-system   replicaset.apps/coredns-66cff8d9f9   2         2         2       7m58s
 einfochips@91P2S24:~/AWS_Learning$ 
-##
-Relevant Images
+##=======================================================
 
 
