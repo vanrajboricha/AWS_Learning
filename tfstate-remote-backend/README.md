@@ -159,7 +159,6 @@ terraform apply
 Outputs:
 
 private_subnet_ids = {
-  "arn" = "arn:aws:ec2:ap-south-1:454143665149:subnet/subnet-0e2543c01fe8bcdc7"
   "assign_ipv6_address_on_creation" = false
   "availability_zone" = "ap-south-1a"
   "availability_zone_id" = "aps1-az1"
@@ -203,7 +202,6 @@ private_subnet_ids = {
   "vpc_id" = "vpc-02358ddc1cb955bcd"
 }
 public_subnet_ids = {
-  "arn" = "arn:aws:ec2:ap-south-1:454143665149:subnet/subnet-0e2543c01fe8bcdc7"
   "assign_ipv6_address_on_creation" = false
   "availability_zone" = "ap-south-1a"
   "availability_zone_id" = "aps1-az1"
