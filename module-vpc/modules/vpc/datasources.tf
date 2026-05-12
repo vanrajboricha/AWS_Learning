@@ -16,8 +16,18 @@ data "aws_nat_gateway" "nat" {
   vpc_id = "vpc-02358ddc1cb955bcd"
   state = "available"
   #subnet_id = aws_subnet.private.id
-  #nat_gateway_id = "nat-054be5efc41467fef"
+  tags = {
+    Name = "vanbor_NAT_GW"
+  }
 }
 
+#locals {
+#  azs             = slice(data.aws_availability_zones.available.names, 0, 2)
+#  private_subnets = [for k, az in local.azs : cidrsubnet(var.vpc_cidr, var.subnet_newbits, k + 10)]
+#}
 
+locals {
+  azs             = ["ap-south-1a", "ap-south-1b"]
+  private_subnets = ["10.0.124.0/24", "10.0.224.0/24"]   
+}
 

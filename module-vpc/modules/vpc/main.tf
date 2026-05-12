@@ -1,21 +1,25 @@
 resource "aws_subnet" "public" {  
   vpc_id                  = data.aws_vpc.main.id
   cidr_block              = "10.0.24.0/24"
+  availability_zone       = "ap-south-1a"
   tags = merge(var.tags, {
     Name = "vanbor-subnet-public"
   })
 }
 
-resource "aws_subnet" "private" {  
-  vpc_id                  = data.aws_vpc.main.id
-  cidr_block              = "10.0.124.0/24"
+resource "aws_subnet" "private" {
+  for_each = { for idx, az in local.azs : az => local.private_subnets[idx] }
+
+  vpc_id     = data.aws_vpc.main.id
+  cidr_block = each.value
+  availability_zone = each.key
   tags = merge(var.tags, {
-    Name = "vanbor-subnet-private"
+    Name = "vanbor-subnet-${each.key}"
   })
 }
 
 resource "aws_route_table" "public_rt" {
-  vpc_id = data.aws_vpc.main.id
+  vpc_id = data.aws_vpc.main.id  
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = data.aws_internet_gateway.igw.id
@@ -38,6 +42,7 @@ resource "aws_route_table" "private_rt" {
 }
 
 resource "aws_route_table_association" "private_rt_assoc" {
-  subnet_id      = aws_subnet.private.id
+  for_each = aws_subnet.private
+  subnet_id = each.value.id
   route_table_id = aws_route_table.private_rt.id
 }
