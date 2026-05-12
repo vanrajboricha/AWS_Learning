@@ -105,6 +105,9 @@ Note: You didn't use the -out option to save this plan, so Terraform can't guara
 now.
 
 
+
+<img width="1149" height="816" alt="image" src="https://github.com/user-attachments/assets/ddc54cd4-2284-48cb-8590-214439d3a08d" />
+
 STEP 4 : DO Terraform Apply and Destroy.
 
 We can apply once validation and Plan has been verified.
