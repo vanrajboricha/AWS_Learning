@@ -1,6 +1,4 @@
 
-
-````markdown id="qv48lv"
 # Terraform AWS VPC Module
 
 This Terraform module provisions networking resources inside AWS.
@@ -79,6 +77,8 @@ module "vpc" {
 | `aws_route_table_association.private_rt_assoc` | Private subnet route associations |
 
 ---
+
+
 
 # Variables
 
@@ -175,6 +175,7 @@ terraform plan
 ```bash
 terraform apply
 ```
+<img width="1553" height="608" alt="Screenshot from 2026-05-12 11-28-47" src="https://github.com/user-attachments/assets/0cfb1642-f2ac-4444-87e8-0df879f6081a" />
 
 ## Destroy Infrastructure
 
@@ -194,13 +195,9 @@ Example outputs that can be exported:
 | `public_subnet_id` | Public subnet ID |
 | `private_subnet_ids` | List of private subnet IDs |
 
----
+<img width="1920" height="1200" alt="Screenshot from 2026-05-12 11-29-59" src="https://github.com/user-attachments/assets/ce7caaf0-314a-4194-ab22-2c21870c5f52" />
 
-# Notes
+<img width="1553" height="608" alt="image" src="https://github.com/user-attachments/assets/3e011954-3660-4f5b-99d0-84bd9c5cca9e" />
 
-- Public subnet is intended for internet-facing workloads.
-- Private subnets are intended for internal services.
-- NAT Gateway allows outbound internet access for private resources.
-- Multi-AZ deployment improves availability.
-- Module supports reusable infrastructure deployment across environments.
+
 ````
