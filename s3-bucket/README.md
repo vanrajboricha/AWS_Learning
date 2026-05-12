@@ -25,6 +25,7 @@ Created bucket:
 ```bash
 tfstate-vanbor-s3-ap-south-1-t4hb
 ````
+<img width="1149" height="816" alt="image" src="https://github.com/user-attachments/assets/c71726d8-8e8c-4bb5-8905-39b79f519ec7" />
 
 Purpose:
 
@@ -230,7 +231,6 @@ actions if you run "terraform apply" now.
 terraform apply
 ```
 einfochips@91P2S24:~/AWS_Learning/s3-bucket$ terraform output
-tfstate_bucket_arn = "arn:aws:s3:::tfstate-vanbor-s3-ap-south-1-t4hb"
 tfstate_bucket_id = "tfstate-vanbor-s3-ap-south-1-t4hb"
 ---
 
