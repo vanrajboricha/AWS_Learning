@@ -10,6 +10,8 @@ AWS Cluster Details from Terminal.
 <img width="1149" height="816" alt="image" src="https://github.com/user-attachments/assets/ce6627a0-953d-4f28-b2e6-97c2ebfad5d2" />
 
 
+<img width="1608" height="1103" alt="image" src="https://github.com/user-attachments/assets/7b2ddde2-9561-4f6e-8a63-e67678911f38" />
+
 -------------------------------
 ##OUTPUT of Cluster Infomation
 --------------------------------
