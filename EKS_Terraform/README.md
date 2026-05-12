@@ -6,30 +6,13 @@ AWS Cluster Details from Terminal.
 
 <img width="1233" height="958" alt="Screenshot from 2026-05-10 14-30-58" src="https://github.com/user-attachments/assets/f1cbd18d-028a-4128-a1eb-218fc41f3624" />
 
+
+<img width="1149" height="816" alt="image" src="https://github.com/user-attachments/assets/ce6627a0-953d-4f28-b2e6-97c2ebfad5d2" />
+
+
 -------------------------------
 ##OUTPUT of Cluster Infomation
 --------------------------------
-
-
-einfochips@91P2S24:~/AWS_Learning$ aws eks --region ap-south-1 update-kubeconfig --name PES-IA-dev-eks-vanbor
-
--------------------------------------------------------
-einfochips@91P2S24:~/AWS_Learning$ kubectl get nodes
-NAME                                          STATUS   ROLES    AGE   VERSION
-ip-10-0-124-219.ap-south-1.compute.internal   Ready    <none>   89s   v1.34.7-eks-4136f65
-ip-10-0-124-42.ap-south-1.compute.internal    Ready    <none>   87s   v1.34.7-eks-4136f65
-ip-10-0-224-124.ap-south-1.compute.internal   Ready    <none>   88s   v1.34.7-eks-4136f65
-einfochips@91P2S24:~/AWS_Learning$ kubectl version
-Client Version: v1.36.0
-Kustomize Version: v5.8.1
-Server Version: v1.34.7-eks-40737a8
-Warning: version difference between client (1.36) and server (1.34) exceeds the supported minor version skew of +/-1
-einfochips@91P2S24:~/AWS_Learning$ kubectl get clusterinfo
-error: the server doesn't have a resource type "clusterinfo"
-einfochips@91P2S24:~/AWS_Learning$ kubectl get --all 
-error: unknown flag: --all
-See 'kubectl get --help' for usage.
-==================================================
 
 einfochips@91P2S24:~/AWS_Learning$ kubectl get all --all-namespaces
 NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE
