@@ -1,7 +1,5 @@
 
 
-Updated `README.md` including the root module usage:
-
 ````markdown id="qv48lv"
 # Terraform AWS VPC Module
 
