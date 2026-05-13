@@ -22,6 +22,10 @@ output "eks_cluster_version" {
   value       = aws_eks_cluster.main.version
 }
 
+output "eks_cluster_tags" {
+  description = "EKS Kubernetes version"
+  value       = aws_eks_cluster.main.tags
+}
 # ------------------------------------------------------------------------------
 # Output the name of the EKS cluster
 # Helpful for scripting, `aws eks update-kubeconfig`, etc.
