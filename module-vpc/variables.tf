@@ -17,10 +17,23 @@ variable "vpc_cidr" {
   default     = "10.0.0.0/16"
 }
 
+#variable "tags" {
+#  description = "Global tags to apply to all resources"
+#  type        = map(string)
+#  default     = {
+#    Terraform = "true"
+#  }
+#}
+
 variable "tags" {
-  description = "Global tags to apply to all resources"
-  type        = map(string)
-  default     = {
-    Terraform = "true"
+  default = {
+    Environment = "test"
+    DM = "dhaval.mehta@einfochips.com"
+    Owner = "vanraj.boricha@einfochips.com"
+    Department = "PES-IA"
+    EndDate = "31/07/2026"
+    BU = "PES"
+    Project_Name = "EIC_Internal"
   }
+  type = map(string)
 }

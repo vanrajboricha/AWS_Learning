@@ -23,6 +23,8 @@ variable "tags" {
     Owner = "vanraj.boricha@einfochips.com"
     Department = "PES-IA"
     EndDate = "31/07/2026"
+    BU = "PES"
+    Project_Name = "EIC_Internal"
   }
   type = map(string)
 }
