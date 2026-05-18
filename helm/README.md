@@ -196,29 +196,6 @@ helm test ui-release -n ui
 
 ---
 
-# Useful Commands
-
-Package chart:
-
-```bash
-helm package charts/ui
-```
-
-Push chart to OCI registry:
-
-```bash
-helm push ui-<version>.tgz oci://<registry>
-```
-
-Pull chart:
-
-```bash
-helm pull oci://<registry>/ui --version <version>
-``
-
-
-----------------------------
-
 
 <img width="1920" height="1200" alt="Screenshot from 2026-05-18 14-38-36" src="https://github.com/user-attachments/assets/c0b93549-aa52-4523-91c0-34a4ff544579" />
 
