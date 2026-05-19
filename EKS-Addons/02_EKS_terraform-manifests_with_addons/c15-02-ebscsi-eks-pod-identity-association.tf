@@ -1,0 +1,11 @@
+resource "aws_eks_pod_identity_association" "ebs_csi" {
+  cluster_name = aws_eks_cluster.main.name
+  namespace = "kube-system"
+  service_account = "ebs-csi-controller-sa"
+  role_arn = aws_iam_role.ebs_csi_iam_role.arn
+}
+
+output "ebs_csi_pod_identity_association" {
+  description = "EBS CSI Driver Pod Identity Association ARN"
+  value = aws_eks_pod_identity_association.ebs_csi.association_arn
+}
