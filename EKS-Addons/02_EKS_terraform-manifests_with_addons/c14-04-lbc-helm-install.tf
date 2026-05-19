@@ -36,7 +36,7 @@ resource "helm_release" "loadbalancer_controller" {
     # VPC Id     
     {
       name  = "vpcId"
-      value = "${data.terraform_remote_state.vpc.outputs.vpc_id}"
+      value = "${data.terraform_remote_state.vpc.outputs.aws_vpc}"
     },
     # AWS Region
     {
