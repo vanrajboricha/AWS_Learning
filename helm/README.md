@@ -207,5 +207,9 @@ helm test ui-release -n ui
 
 <img width="1920" height="1200" alt="Screenshot from 2026-05-19 11-49-47" src="https://github.com/user-attachments/assets/d7c9d26e-452d-4c17-b2be-7aecafbe9144" />
 
+<img width="1920" height="1200" alt="Screenshot from 2026-05-19 11-55-55" src="https://github.com/user-attachments/assets/5fcf360c-8fd8-4593-a619-ca6b909dba25" />
+
+<img width="1920" height="1200" alt="Screenshot from 2026-05-19 12-17-00" src="https://github.com/user-attachments/assets/8f3eddf7-67ac-4d5e-b54d-b09b6a888b38" />
 
 
+<img width="1907" height="1063" alt="Screenshot from 2026-05-19 12-18-23" src="https://github.com/user-attachments/assets/91164ebf-56b8-4348-a1e7-67046e0cb0b9" />
