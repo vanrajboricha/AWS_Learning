@@ -56,9 +56,9 @@ resource "aws_eks_node_group" "private_nodes" {
     version = "$Latest"
   }
   scaling_config {
-    desired_size = 3
+    desired_size = 2
     min_size = 1
-    max_size = 6
+    max_size = 3
   }
   update_config {
     max_unavailable_percentage = 33
