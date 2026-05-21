@@ -1,6 +1,6 @@
 resource "aws_dynamodb_table" "items_ap-south-1" {
   provider       = aws
-  name           = "Items"
+  name           = "vanbor-Items"
   billing_mode   = "PAY_PER_REQUEST"    # On-demand pricing (no capacity planning)
   hash_key       = "id"
 

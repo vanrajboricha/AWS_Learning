@@ -1,5 +1,5 @@
 resource "aws_db_instance" "catalog_rds" {
-  identifier              = "mydb3"
+  identifier              = "vanbor-mydb3"
   engine                  = "mysql"
   engine_version          = "8.0"
   instance_class          = "db.t3.micro"
