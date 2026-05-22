@@ -15,7 +15,7 @@ resource "helm_release" "secrets_store_csi_driver" {
      },
      {
         name = "tokenRequests[0].audience"
-        value = "pod.eks.amazonaws.com"
+        value = "pods.eks.amazonaws.com"
      },
    ]
    wait = true
