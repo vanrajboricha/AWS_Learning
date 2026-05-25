@@ -7,6 +7,7 @@ resource "aws_elasticache_cluster" "checkout_redis" {
   engine_version       = "7.1"
   parameter_group_name = "default.redis7"
   tags = var.tags
+  num_cache_nodes   = 1
 }
 
 output "checkout_redis_endpoint" {

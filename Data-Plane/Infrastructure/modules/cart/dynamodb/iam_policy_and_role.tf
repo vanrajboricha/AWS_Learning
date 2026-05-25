@@ -37,6 +37,11 @@ resource "aws_iam_role" "cart_dynamodb_role" {
 tags = var.tags
 }
 
+resource "aws_iam_role_policy_attachment" "cart_dynamodb_policy_attach" {
+  policy_arn = aws_iam_policy.cart_dynamodb_policy.arn
+  role       = aws_iam_role.cart_dynamodb_role.name
+}
+
 output "cart_dynamodb_policy_arn" {
   description = "IAM Policy ARN for Cart microservice DynamoDB access"
   value       = aws_iam_policy.cart_dynamodb_policy.arn
