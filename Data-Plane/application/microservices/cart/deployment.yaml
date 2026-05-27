@@ -7,6 +7,15 @@ metadata:
     app.kubernetes.io/instance: carts
     app.kubernetes.io/component: service
     app.kubernetes.io/owner: retail-store-sample
+podDisruptionBudget:
+  enabled: false
+  minAvailable: 2
+  maxUnavailable: 0
+
+# Added OpenTelemetry stanza
+opentelemetry:
+  enabled: true
+  instrumentation: "default-instrumentation"
 spec:
   replicas: 1
   strategy:

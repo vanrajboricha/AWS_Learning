@@ -7,6 +7,17 @@ metadata:
     app.kubernetes.io/instance: catalog
     app.kubernetes.io/component: service
     app.kubernetes.io/owner: retail-store-sample
+
+podDisruptionBudget:
+  enabled: false
+  minAvailable: 2
+  maxUnavailable: 0
+
+# Added OpenTelemetry stanza
+opentelemetry:
+  enabled: true
+  instrumentation: "default-instrumentation"
+  
 spec:
   replicas: 1
   strategy:
@@ -63,8 +74,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: catalog
-            - secretRef:
-                name: catalog-db
+            # - secretRef:
+            #     name: catalog-db
           securityContext:
             capabilities:
               drop:
@@ -98,17 +109,17 @@ spec:
             - mountPath: /tmp
               name: tmp-volume
             # Mount the CSI secrets volume - this will trigger secret creation              
-            - name: aws-secrets
-              mountPath: /mnt/secrets-store
-              readOnly: true         
+            # - name: aws-secrets
+            #   mountPath: /mnt/secrets-store
+            #   readOnly: true         
       volumes:
         - name: tmp-volume
           emptyDir:
             medium: Memory
         # Add the CSI secrets volume            
-        - name: aws-secrets
-          csi:
-            driver: secrets-store.csi.k8s.io
-            readOnly: true
-            volumeAttributes:
-              secretProviderClass: "catalog-db-secrets"            
+        # - name: aws-secrets
+        #   csi:
+        #     driver: secrets-store.csi.k8s.io
+        #     readOnly: true
+        #     volumeAttributes:
+        #       secretProviderClass: "catalog-db-secrets"            
