@@ -40,7 +40,7 @@ STEP1: You push code changes to the UI microservice.
 STEP2: GitHub Actions builds the Docker image, applies tags, and pushes it to ECR.
 STEP3: The values-ui.yaml Helm file is updated with the new image tag.
 STEP4: ArgoCD then syncs the changes from Git and deploys the updated version to the EKS cluster.
-----------
+
 
 <img width="1920" height="1200" alt="Screenshot from 2026-05-27 11-33-55" src="https://github.com/user-attachments/assets/44c8935d-10ab-4232-be86-b414bff7f2c8" />
 
