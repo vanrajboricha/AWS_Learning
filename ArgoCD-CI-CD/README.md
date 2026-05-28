@@ -1,6 +1,7 @@
 ------
 Structure of Project files are mentioned as below.
 ------
+````bash
 einfochips@91P2S24:~/AWS_Learning/ArgoCD-CI-CD$ tree -A
 
 
@@ -33,7 +34,7 @@ einfochips@91P2S24:~/AWS_Learning/ArgoCD-CI-CD$ tree -A
         └── README.md
 
 7 directories, 19 files
-
+````
 
 
 WorkFlow of ArgoCD project as mentioned below.
