@@ -36,9 +36,9 @@ einfochips@91P2S24:~/AWS_Learning/ArgoCD-CI-CD$ tree -A
 7 directories, 19 files
 ````
 
-
+----
 WorkFlow of ArgoCD project as mentioned below.
-
+----
 STEP1: You push code changes to the UI microservice.
 
 STEP2: GitHub Actions builds the Docker image, applies tags, and pushes it to ECR.
