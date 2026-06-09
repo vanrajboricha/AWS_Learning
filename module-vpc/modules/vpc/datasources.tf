@@ -28,6 +28,7 @@ data "aws_nat_gateway" "nat" {
 
 locals {
   azs             = ["ap-south-1a", "ap-south-1b"]
-  private_subnets = ["10.0.124.0/24", "10.0.224.0/24"]   
+  private_subnets = ["10.0.124.0/24", "10.0.224.0/24"] 
+  public_subnets = ["10.0.241.0/24", "10.0.242.0/24"]  
 }
 
